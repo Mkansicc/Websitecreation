@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern CV Website Creation | Your CV, Your Story</title>
+  <meta name="description" content="Get a modern CV website: customizable, dark/light theme, printable, Save as PDF, mobile-friendly. Your CV, your story." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <header class="topbar" id="top">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="logo" aria-hidden="true">CV</span>
+        <div class="brand-text">
+          <div class="brand-name">Modern CV Website</div>
+          <div class="brand-sub">Your CV, your story.</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#portfolio">Examples</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+
+      <div class="top-actions">
+        <button id="themeBtn" class="btn ghost" type="button" aria-label="Toggle theme" title="Toggle theme">
+          🌓 <span class="hide-sm">Theme</span>
+        </button>
+        <button class="btn" type="button" id="printBtn" title="Print / Save as PDF">
+          🖨️ <span class="hide-sm">Print</span>
+        </button>
+      </div>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" title="Menu">☰</button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <a href="#features">Features</a>
+      <a href="#portfolio">Examples</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">CV WEBSITE CREATION • FAST • PROFESSIONAL</p>
+        <h1 class="h1">
+          Modern CV Website that <span class="grad">gets you noticed</span>.
+        </h1>
+        <p class="lead">
+          Get a clean, mobile-friendly CV website that you can share with one link.
+          <strong>Customizable</strong>, <strong>Dark & Light theme</strong>, <strong>Printable</strong>, and
+          <strong>Save as PDF</strong> on one click — because <strong>Your CV, your story</strong>.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#pricing">Get Yours Today</a>
+          <a class="btn" href="#portfolio">See Examples</a>
+          <a class="btn ghost" href="#contact">Talk to Me</a>
+        </div>
+
+        <div class="trust">
+          <div class="trust-item">
+            <div class="trust-num">24–72h</div>
+            <div class="trust-text">Delivery (depending on package)</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-num">1 Link</div>
+            <div class="trust-text">Share on WhatsApp, email & LinkedIn</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-num">100%</div>
+            <div class="trust-text">Mobile-friendly + Print-ready</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card card">
+        <div class="preview-top">
+          <div class="dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="chip">Live Preview</span>
+        </div>
+
+        <div class="preview">
+          <div class="pv-head">
+            <div class="pv-avatar" aria-hidden="true">YS</div>
+            <div>
+              <div class="pv-name">Your Name Surname</div>
+              <div class="pv-role">Role • Skills • Location</div>
+            </div>
+          </div>
+
+          <div class="pv-grid">
+            <div class="pv-box">
+              <div class="pv-title">Modern sections</div>
+              <div class="pv-sub">Profile • Skills • Experience</div>
+            </div>
+            <div class="pv-box">
+              <div class="pv-title">Dark/Light theme</div>
+              <div class="pv-sub">One click switch</div>
+            </div>
+            <div class="pv-box">
+              <div class="pv-title">Print & PDF</div>
+              <div class="pv-sub">Ready for HR</div>
+            </div>
+            <div class="pv-box">
+              <div class="pv-title">Share link</div>
+              <div class="pv-sub">GitHub Pages</div>
+            </div>
+          </div>
+
+          <div class="pv-actions">
+            <button class="btn small" type="button" id="demoTheme">🌓 Theme</button>
+            <button class="btn small primary" type="button" id="demoPrint">🖨️ Print/PDF</button>
+          </div>
+
+          <p class="tiny">
+            Tip: On desktop choose “Save as PDF” in the print dialog to export your CV PDF.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">What you get</h2>
+        <p class="sub">
+          A CV that looks premium and works everywhere — phone, laptop, and even as a printable PDF.
+        </p>
+      </div>
+
+      <div class="grid3">
+        <div class="card feature">
+          <div class="icon">✨</div>
+          <h3>Modern CV Design</h3>
+          <p>Clean layout, strong typography, and a professional look that stands out.</p>
+        </div>
+
+        <div class="card feature">
+          <div class="icon">🎨</div>
+          <h3>Customizable</h3>
+          <p>Change colors, sections, skills, projects, photos, and links anytime.</p>
+        </div>
+
+        <div class="card feature">
+          <div class="icon">🌓</div>
+          <h3>Dark & Light Theme</h3>
+          <p>One click theme switch. Looks good in any environment.</p>
+        </div>
+
+        <div class="card feature">
+          <div class="icon">🖨️</div>
+          <h3>Printable on Button</h3>
+          <p>Print-ready styling with a “Print / Save as PDF” button built-in.</p>
+        </div>
+
+        <div class="card feature">
+          <div class="icon">📄</div>
+          <h3>Convert to PDF</h3>
+          <p>Use the browser print dialog → “Save as PDF” for a polished CV PDF.</p>
+        </div>
+
+        <div class="card feature">
+          <div class="icon">🔗</div>
+          <h3>One Link to Share</h3>
+          <p>Share your CV website link via WhatsApp, email, LinkedIn, and QR code.</p>
+        </div>
+      </div>
+
+      <div class="banner card">
+        <div>
+          <h3 class="banner-title">Your CV, your story — tell it like a professional.</h3>
+          <p class="banner-sub">
+            A website CV gives employers more confidence: it’s clear, organized, and easy to view.
+          </p>
+        </div>
+        <a class="btn primary" href="#contact">Start Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio / examples -->
+  <section id="portfolio" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">Example styles</h2>
+        <p class="sub">Choose your vibe — simple, professional, creative, or executive.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card mock">
+          <div class="mock-top">
+            <span class="chip">Classic</span>
+            <span class="muted">Clean & HR-friendly</span>
+          </div>
+          <div class="mock-body">
+            <div class="lines">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <a class="mock-link" href="#contact">Request this style →</a>
+        </div>
+
+        <div class="card mock">
+          <div class="mock-top">
+            <span class="chip">Modern</span>
+            <span class="muted">Sections + highlights</span>
+          </div>
+          <div class="mock-body">
+            <div class="tiles">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <a class="mock-link" href="#contact">Request this style →</a>
+        </div>
+
+        <div class="card mock">
+          <div class="mock-top">
+            <span class="chip">Executive</span>
+            <span class="muted">Premium look</span>
+          </div>
+          <div class="mock-body">
+            <div class="bars">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <a class="mock-link" href="#contact">Request this style →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">Pricing packages</h2>
+        <p class="sub">Affordable packages — you choose what fits your needs.</p>
+      </div>
+
+      <div class="grid3 pricing">
+        <div class="card price">
+          <div class="price-head">
+            <h3>Starter</h3>
+            <p class="price-tag">From <strong>R---</strong></p>
+          </div>
+          <ul class="checks">
+            <li>Modern 1-page CV website</li>
+            <li>Mobile-friendly</li>
+            <li>Print / Save as PDF button</li>
+            <li>Contact buttons</li>
+          </ul>
+          <a class="btn primary" href="#contact">Choose Starter</a>
+          <p class="tiny muted">Edit price to your choice (R---).</p>
+        </div>
+
+        <div class="card price popular">
+          <div class="badge">Most Popular</div>
+          <div class="price-head">
+            <h3>Pro</h3>
+            <p class="price-tag">From <strong>R---</strong></p>
+          </div>
+          <ul class="checks">
+            <li>Everything in Starter</li>
+            <li>Dark & Light theme toggle</li>
+            <li>Projects section + skills tags</li>
+            <li>Basic SEO (Google-friendly)</li>
+            <li>Deploy on GitHub Pages</li>
+          </ul>
+          <a class="btn primary" href="#contact">Choose Pro</a>
+          <p class="tiny muted">Perfect for job seekers.</p>
+        </div>
+
+        <div class="card price">
+          <div class="price-head">
+            <h3>Premium</h3>
+            <p class="price-tag">From <strong>R---</strong></p>
+          </div>
+          <ul class="checks">
+            <li>Everything in Pro</li>
+            <li>Custom sections (certs, awards, gallery)</li>
+            <li>Custom domain support (optional)</li>
+            <li>QR Code for your CV link</li>
+            <li>Priority delivery</li>
+          </ul>
+          <a class="btn primary" href="#contact">Choose Premium</a>
+          <p class="tiny muted">Best for professionals & entrepreneurs.</p>
+        </div>
+      </div>
+
+      <div class="note card">
+        <div>
+          <h3 class="banner-title">Want it fast?</h3>
+          <p class="banner-sub">Send your info and I build your CV website quickly and professionally.</p>
+        </div>
+        <a class="btn" href="#contact">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">FAQ</h2>
+        <p class="sub">Quick answers to common questions.</p>
+      </div>
+
+      <div class="faq">
+        <details class="card" open>
+          <summary>How do I convert the CV website to PDF?</summary>
+          <div class="faq-body">
+            Click the <strong>Print / Save as PDF</strong> button, then choose <strong>Save as PDF</strong> in the print options.
+          </div>
+        </details>
+
+        <details class="card">
+          <summary>Will it work on phones?</summary>
+          <div class="faq-body">
+            Yes — it’s fully responsive and looks great on mobile and desktop.
+          </div>
+        </details>
+
+        <details class="card">
+          <summary>Can I update the CV later?</summary>
+          <div class="faq-body">
+            Yes — you can edit your text anytime. I can also help you update it if you want.
+          </div>
+        </details>
+
+        <details class="card">
+          <summary>Do I get a link to share?</summary>
+          <div class="faq-body">
+            Yes — we deploy on GitHub Pages, so you share one simple link anywhere.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">Contact</h2>
+        <p class="sub">Ready to upgrade your CV? Send your details and I’ll start.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="card contact-card">
+          <h3 class="h3">Send your details</h3>
+          <ul class="bullets">
+            <li>Full name + role</li>
+            <li>Work experience</li>
+            <li>Education + certificates</li>
+            <li>Skills + references (optional)</li>
+            <li>Photo (optional)</li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn primary" id="waBtn" href="https://wa.me/27723427049" target="_blank" rel="noreferrer">
+              WhatsApp Me
+            </a>
+            <a class="btn" href="tel:+27723427049">Call: 072 342 7049</a>
+          </div>
+
+          <p class="tiny muted">
+            Change the phone number in the code if you want another contact.
+          </p>
+        </div>
+
+        <div class="card contact-card">
+          <h3 class="h3">Why customers choose this</h3>
+          <div class="list-cards">
+            <div class="mini">
+              <div class="mini-title">Professional look</div>
+              <div class="mini-sub">A polished CV makes a strong first impression.</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Simple sharing</div>
+              <div class="mini-sub">Send one link — HR can view instantly.</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Print-ready</div>
+              <div class="mini-sub">One click to export PDF for attachments.</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Your brand</div>
+              <div class="mini-sub">Your CV, your story — presented with confidence.</div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <p class="tiny">
+            Want a logo + colors for your personal brand? I can add that too.
+          </p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <span>© <span id="year"></span> Modern CV Website Creation</span>
+        <span class="sep">•</span>
+        <a href="#top">Back to top</a>
+      </footer>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
