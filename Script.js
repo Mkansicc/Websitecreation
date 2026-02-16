@@ -1,63 +1,59 @@
-(function () {
-  const root = document.documentElement;
+// Helpers
+const $ = (sel) => document.querySelector(sel);
 
-  // Year
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+const themeBtn = $("#themeBtn");
+const printBtn = $("#printBtn");
+const demoTheme = $("#demoTheme");
+const demoPrint = $("#demoPrint");
+const menuBtn = $("#menuBtn");
+const mobileNav = $("#mobileNav");
+const yearEl = $("#year");
 
-  // Theme
-  const themeBtn = document.getElementById("themeBtn");
-  const saved = localStorage.getItem("site_theme");
-  if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+yearEl.textContent = new Date().getFullYear();
 
-  function toggleTheme() {
-    const current = root.getAttribute("data-theme") || "dark";
-    const next = current === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
-    localStorage.setItem("site_theme", next);
-  }
+// Theme (persist)
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
 
-  if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
+function toggleTheme(){
+  const curr = document.documentElement.getAttribute("data-theme");
+  const next = curr === "light" ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
+}
 
-  // Print / PDF
-  const printBtn = document.getElementById("printBtn");
-  if (printBtn) printBtn.addEventListener("click", () => window.print());
+themeBtn?.addEventListener("click", toggleTheme);
+demoTheme?.addEventListener("click", toggleTheme);
 
-  // Demo buttons in preview
-  const demoTheme = document.getElementById("demoTheme");
-  const demoPrint = document.getElementById("demoPrint");
-  if (demoTheme) demoTheme.addEventListener("click", toggleTheme);
-  if (demoPrint) demoPrint.addEventListener("click", () => window.print());
+// Print/PDF
+function doPrint(){ window.print(); }
+printBtn?.addEventListener("click", doPrint);
+demoPrint?.addEventListener("click", doPrint);
 
-  // Mobile menu
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileNav = document.getElementById("mobileNav");
-  let open = false;
-
-  function setMobileNav(state) {
-    open = state;
-    if (!mobileNav) return;
-    mobileNav.style.display = open ? "block" : "none";
-    mobileNav.setAttribute("aria-hidden", open ? "false" : "true");
-    if (menuBtn) menuBtn.textContent = open ? "✕" : "☰";
-  }
-
-  if (menuBtn && mobileNav) {
-    menuBtn.addEventListener("click", () => setMobileNav(!open));
-    mobileNav.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => setMobileNav(false));
-    });
-  }
-
-  // Smooth scroll for in-page links
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", (e) => {
-      const id = link.getAttribute("href");
-      if (!id || id === "#") return;
-      const el = document.querySelector(id);
-      if (!el) return;
-      e.preventDefault();
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+// Mobile menu
+menuBtn?.addEventListener("click", () => {
+  const isOpen = mobileNav.style.display === "grid";
+  mobileNav.style.display = isOpen ? "none" : "grid";
+  mobileNav.setAttribute("aria-hidden", String(isOpen));
+});
+mobileNav?.querySelectorAll("a").forEach(a => {
+  a.addEventListener("click", () => {
+    mobileNav.style.display = "none";
+    mobileNav.setAttribute("aria-hidden", "true");
   });
-})();
+});
+
+// Reveal on scroll (animations)
+const items = document.querySelectorAll(".reveal");
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add("in");
+  });
+}, { threshold: 0.12 });
+
+items.forEach(el => io.observe(el));
+
+// Default theme if none set
+if (!savedTheme){
+  document.documentElement.setAttribute("data-theme", "dark");
+}
